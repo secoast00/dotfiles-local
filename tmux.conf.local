@@ -1,0 +1,69 @@
+# -g => global
+# -r 
+# -n => no prefix key
+#
+# unset the default then use ctrl-s for the meta
+# unbind C-b
+# set-option -g prefix C-s
+# to use the ctrl-s key, pres it twice and it will pass thru
+bind-key -r C-s send-prefix
+
+bind-key r source-file ~/.tmux.conf \; display-message "~/.tmux.conf reloaded"
+
+# switch panes w/out prefix key
+bind-key -n C-h select-pane -L
+bind-key -n C-j select-pane -D
+bind-key -n C-k select-pane -U
+bind-key -n C-l select-pane -R
+
+# tmux implementation of vi keys is buggy 
+# and incomplete so use emacs for : prompt
+set-option -g status-keys "emacs"
+
+# setup any status bar items
+set-option -g status-left-length 50
+set-option -g status-right " #(date '+%a, %b %d - %I:%M') "
+
+# more intuitive splits keys
+bind-key - split-window -v -c '#{pane_current_path}'
+bind-key \ split-window -h -c '#{pane_current_path}'
+
+### Pane Size Adjustment
+# Fine adjustment (1 or 2 cursor cells per bump)
+# Shift - arrow
+bind -n S-Left resize-pane -L 2
+bind -n S-Right resize-pane -R 2
+bind -n S-Down resize-pane -D 1
+bind -n S-Up resize-pane -U 1
+
+# Coarse adjustment (5 or 10 cursor cells per bump)
+# Ctrl - arrow
+bind -n C-Left resize-pane -L 10
+bind -n C-Right resize-pane -R 10
+bind -n C-Down resize-pane -D 5
+bind -n C-Up resize-pane -U 5
+
+# # New window
+bind c new-window -c '#{pane_current_path}'
+
+# Break current pane into a new window
+# leaving you in original window (-d means detached)
+bind-key b break-pane -d
+
+# allow selection of sessions from a list
+# prefix, ctrl - j
+# <prefix>-L switch to last session (built inj
+bind-key C-j choose-tree
+
+# ctrl - [, then v, select with hjkl or enter, y to yank
+# Setup 'v' to begin selection as in Vim
+bind-key -t vi-copy v begin-selection
+# bind-key -t vi-copy y copy-pipe "reattach-to-user-namespace pbcopy"
+
+# Update default binding of `Enter` to also use copy-pipe
+# unbind -t vi-copy Enter
+# bind-key -t vi-copy Enter copy-pipe # "reattach-to-user-namespace pbcopy"
+
+# switch to last pane
+bind-key C-a last-pane
+

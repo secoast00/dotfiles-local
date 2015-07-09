@@ -1,0 +1,24 @@
+# npm and karma
+# export PATH=$PATH:"/usr/local/sbin:"
+# export PATH=$PATH:"/usr/local/bin/node:"
+# export PATH=$PATH:"/usr/local/bin/npm:"
+# export PATH=$PATH:"/usr/local/lib/node_modules/karma/bin:"
+
+# reference correct ctags on osx
+# alias ctags="`brew --prefix`/bin/ctags"
+alias ber="bundle exec rake"
+alias be="bundle exec"
+alias tct="time bundle exec rake teamcity:ci_parallel && bundle exec rake jasmine:ci"
+
+# tmux 
+alias tmls="tmux list-sessions"
+alias tmns="tmux new-session -s"
+alias tmss="tmux switch-client -t"
+alias tmat="tat"
+
+#
+#
+# export CONFIG_ENDPOINT="http://olh.platformconfig.dev"
+# export ENTITY_ENDPOINT="http://olh.entityservice.dev"
+# export ASSESSMENT_ENDPOINT="http://olh.assessmentservice.dev"
+# export CONTENT_ENDPOINT="http://olh.contentservice.dev"

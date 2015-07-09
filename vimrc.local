@@ -1,0 +1,57 @@
+" Color scheme
+syntax enable
+colorscheme monokai
+
+highlight NonText guibg=#060606
+highlight Folded  guibg=#0A0A0A guifg=#9090D0
+
+set hlsearch
+
+" Yank entire buffer with gy
+nnoremap gy :%y+<cr>
+
+" Select entire buffer
+nnoremap vy ggVG
+
+" Just to beginning and end of lines easier. From http://vimbits.com/bits/16
+noremap H ^
+noremap L $
+
+" Switch search highlighting off when Enter is pressed
+" <C-r> for easier redo
+" from http://vimbits.com/bits/356
+nnoremap U <C-r>
+nnoremap <CR> :nohlsearch<CR><CR>
+
+" cursor change for insert vs command mode
+if exists("$TMUX")
+  let &t_SI = "\<Esc>[3 q"
+  let &t_EI = "\<Esc>[0 q"
+  let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
+  let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+endif
+
+" need to make this check for iterm, check for zeus
+let g:rspec_runner = "os_x_iterm"
+let g:rspec_command = "!zeus rspec {spec}"
+
+"  Save file when changing windows
+ nnoremap <silent> gh :WriteBufferIfNecessary<CR>:wincmd h<CR>
+ nnoremap <silent> gj :WriteBufferIfNecessary<CR>:wincmd j<CR>
+ nnoremap <silent> gk :WriteBufferIfNecessary<CR>:wincmd k<CR>
+ nnoremap <silent> gl :WriteBufferIfNecessary<CR>:wincmd l<CR>
+
+" change line number style
+" when in nav mode, show relative
+" when in edit mode, show absolute
+ "set rnu
+ "au InsertEnter * :set nu
+ "au InsertLeave * :set rnu
+ "au FocusLost * :set nu
+ "au FocusGained * :set rnu
+ 
+ " replaced i think by ctl - z
+ " zoom a vim pane, <C-w>= to re-balance
+"  nnoremap <Leader>- :wincmd _<cr>:wincmd \|<cr>
+"  nnoremap <Leader>= :wincmd =<cr>
+

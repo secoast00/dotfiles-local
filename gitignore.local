@@ -1,0 +1,21 @@
+kjp*
+
+.envrc
+
+.idea
+
+.ruby-gemset
+.ruby-version
+
+
+# zeus files
+custom_plan.rb
+zeus.json
+
+# pow files
+.powrc
+
+# bundler
+bundler_stubs
+
+
