@@ -22,6 +22,7 @@ set-option -g status-keys "emacs"
 
 # setup any status bar items
 set-option -g status-left-length 50
+set-option -g status-left " [#S] "
 set-option -g status-right " #(date '+%a, %b %d - %I:%M') "
 
 # more intuitive splits keys

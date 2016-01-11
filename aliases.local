@@ -13,8 +13,6 @@ alias -g G='| grep'
 # reference correct ctags on osx
 # alias ctags="`brew --prefix`/bin/ctags"
 alias be="bundle exec"
-alias tctp="time bundle exec rake teamcity:ci_parallel && bundle exec rake jasmine:ci"
-alias tct="time bundle exec rake teamcity:ci && bundle exec rake jasmine:ci"
 
 # tmux 
 alias tmls="tmux list-sessions"
