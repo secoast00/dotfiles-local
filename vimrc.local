@@ -39,7 +39,7 @@ endif
 
 " need to make this check for iterm, check for zeus
 let g:rspec_runner = "os_x_iterm"
-let g:rspec_command = "!zeus rspec {spec}"
+let g:rspec_command = "!bin/rspec {spec}"
 
 "  Save file when changing windows
  nnoremap <silent> gh :WriteBufferIfNecessary<CR>:wincmd h<CR>
