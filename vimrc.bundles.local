@@ -1,2 +1,3 @@
 "Plugin 'The-NERD-Commenter'
+Plug 'elzr/vim-json'
 Plug 'rizzatti/dash.vim'
