@@ -74,4 +74,4 @@ bind-key -t vi-copy v begin-selection
 bind-key C-a last-pane
 
 # Remove esc delay for vim
-# set -sg escape-time 0
+set -sg escape-time 0
