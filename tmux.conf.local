@@ -76,7 +76,7 @@ bind-key C-j choose-tree
 # ctrl - [, then v, select with hjkl or enter, y to yank
 # Setup 'v' to begin selection as in Vim
 bind-key -t vi-copy v begin-selection
-# bind-key -t vi-copy y copy-pipe "reattach-to-user-namespace pbcopy"
+bind-key -t vi-copy y copy-pipe "reattach-to-user-namespace pbcopy"
 
 # Update default binding of `Enter` to also use copy-pipe
 # unbind -t vi-copy Enter

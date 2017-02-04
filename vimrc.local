@@ -1,15 +1,21 @@
 " Color scheme
 syntax enable
 colorscheme monokai
+set visualbell
+" turn off auto line break insertion
+set textwidth=0 wrapmargin=0
 
 " Make it obvious where col 80 is and also all after col 120
-set textwidth=80
-set colorcolumn=+1
-highlight ColorColumn ctermbg=235 guibg=#2c2d27
-let &colorcolumn="80,".join(range(120,999),",")
+" set colorcolumn=+1
+let &colorcolumn="80,".join(range(120,130),",")
 
-highlight NonText guibg=#060606
-highlight Folded  guibg=#0A0A0A guifg=#9090D0
+
+" need to add ctermbg colors
+" highlight NonText guibg=#060606
+" highlight Folded  guibg=#0A0A0A guifg=#9090D0
+" highlight ColorColumn ctermbg=235
+
+set cursorline
 
 set hlsearch
 
@@ -38,8 +44,9 @@ if exists("$TMUX")
 endif
 
 " need to make this check for iterm, check for zeus
-let g:rspec_runner = "os_x_iterm"
-let g:rspec_command = "!bin/rspec {spec}"
+let g:rspec_runner = "os_x_iterm2"
+"let g:rspec_command = "!bin/rspec {spec}"
+let g:rspec_command = "!rspec {spec}"
 
 "  Save file when changing windows
  nnoremap <silent> gh :WriteBufferIfNecessary<CR>:wincmd h<CR>
@@ -47,17 +54,35 @@ let g:rspec_command = "!bin/rspec {spec}"
  nnoremap <silent> gk :WriteBufferIfNecessary<CR>:wincmd k<CR>
  nnoremap <silent> gl :WriteBufferIfNecessary<CR>:wincmd l<CR>
 
+" nnoremap <C-j> <C-w>j
+" nnoremap <C-k> <C-w>k
+" nnoremap <C-h> <C-w>h
+" nnoremap <C-l> <C-w>l
+
 " change line number style
 " when in nav mode, show relative
 " when in edit mode, show absolute
- "set rnu
- "au InsertEnter * :set nu
- "au InsertLeave * :set rnu
- "au FocusLost * :set nu
- "au FocusGained * :set rnu
- 
+" set rnu
+" au InsertEnter * :set nu
+" au InsertLeave * :set rnu
+" au FocusLost * :set nu
+" au FocusGained * :set rnu
+"
  " replaced i think by ctl - z
  " zoom a vim pane, <C-w>= to re-balance
 "  nnoremap <Leader>- :wincmd _<cr>:wincmd \|<cr>
 "  nnoremap <Leader>= :wincmd =<cr>
 
+" enable the mouse
+"set term=xterm
+set mouse=a
+
+" let g:syntastic_javascript_checkers = ['eslint']
+
+:nmap <silent> <leader>d <Plug>DashSearch
+
+" bind K to grep/ag word under cursor
+nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+
+" Allow JSX in normal JS files
+let g:jsx_ext_required = 0

@@ -4,18 +4,21 @@ kjp*
 
 .idea
 
-.ruby-gemset
-.ruby-version
+postgres_log
 
 
-# zeus files
-custom_plan.rb
-zeus.json
+# .ruby-gemset
+# .ruby-version
+
 
 # pow files
-.powrc
+# .powrc
 
 # bundler
-bundler_stubs
+# bundler_stubs
 
+*.pdf
+.env*
 
+/.idea
+coverage

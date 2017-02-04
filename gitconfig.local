@@ -5,4 +5,41 @@
   default=current
 
 [alias]
-  l = log --graph --decorate --oneline
+  # basics
+  br    = branch -v
+  bra   = branch -a -v
+  co    = checkout
+  cp    = cherry-pick
+  ci    = commit
+  diff  = diff --word-diff
+  dc    = diff --cached
+  dno   = diff --name-only
+  pf    = push --force-with-lease
+
+  r     = reset
+  r1    = reset HEAD~1
+  rh    = reset --hard
+  rh1   = reset HEAD~1 --hard
+
+  sp    = stash pop
+
+  l     = log --graph --decorate --oneline
+  lch   = log -p --follow -n 1
+
+  # optional param -n where n is number of commits
+  ls    = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+  ll    = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+  ld    = log --graph --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
+  lds   = log --graph --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
+
+  # file log: pass filename to see history
+  fl    = log -u
+
+  # diff of last commit
+  dlc   = diff --cached HEAD~1
+
+  # pass a hash of a commit to see ll of or diff of
+  lc    = "!f() { git ll "$1"^.."$1"; }; f"
+  dr    = "!f() { git diff "$1"^.."$1"; }; f"
+
+  la = "!git config -l | grep alias | cut -c 7-"
