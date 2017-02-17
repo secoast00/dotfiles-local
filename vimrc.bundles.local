@@ -1,12 +1,14 @@
-"Plugin 'The-NERD-Commenter'
+Plug 'valloric/youcompleteme'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'pangloss/vim-javascript'  " js
+Plug 'mxw/vim-jsx'  " jsx but not js
+Plug 'avdgaag/vim-rbfactor'  " ruby extract 
+Plug 'christoomey/vim-rfactory'  " simpler nav to FactoryGirl factories
+Plug 'rizzatti/dash.vim'
+"
 " Plug 'elzr/vim-json'
-" Plug 'rizzatti/dash.vim'
-" Plug 'christoomey/vim-rfactory'  " simpler nav to FactoryGirl factories
 " Plug 'scrooloose/nerdtree'
-" Plug 'christoomey/vim-tmux-navigator'
 " Plug 'tpope/vim-haml'
 " Plug 'godlygeek/tabular'
-" Plug 'pangloss/vim-javascript'
-" Plug 'valloric/youcompleteme'
-" Plug 'mxw/vim-jsx'
 " Plug 'jceb/vim-orgmode'
+"Plug 'vim-scripts/xxx'
