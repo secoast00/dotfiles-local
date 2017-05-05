@@ -1,13 +1,26 @@
 Plug 'valloric/youcompleteme'
+" C-h/j/k/l to change out of vim into tmux pane
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'pangloss/vim-javascript'  " js
-Plug 'mxw/vim-jsx'  " jsx but not js
-Plug 'avdgaag/vim-rbfactor'  " ruby extract 
-Plug 'christoomey/vim-rfactory'  " simpler nav to FactoryGirl factories
+" Don't know if needed
+Plug 'pangloss/vim-javascript'
+" JSX
+Plug 'mxw/vim-jsx'
+" Refactor ruby code
+Plug 'avdgaag/vim-rbfactor'  " ruby extract
+" Nav to factories
+Plug 'christoomey/vim-rfactory'
+" Access to dash, word under cursor or typed in
 Plug 'rizzatti/dash.vim'
-"
+" Color/info in status bar
+Plug 'vim-airline/vim-airline'
+" Really only use for directory changes
+Plug 'scrooloose/nerdtree'
+" Static linter/style checking
+Plug 'ngmy/vim-rubocop'
+" Commands  "[???"
+Plug 'tpope/vim-unimpared'
+
 " Plug 'elzr/vim-json'
-" Plug 'scrooloose/nerdtree'
 " Plug 'tpope/vim-haml'
 " Plug 'godlygeek/tabular'
 " Plug 'jceb/vim-orgmode'

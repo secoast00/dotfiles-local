@@ -1,7 +1,7 @@
 # Unix
 alias cl="clear"
-alias ll='exa -alh --sort=(name)'
-alias ls='exa -a --group-directories-first'
+#alias ll='exa -alh --sort=(name)'
+#alias ls='exa -a --group-directories-first'
 
 alias ...='../..'
 alias -g G='| grep'

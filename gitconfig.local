@@ -1,8 +1,15 @@
+[core]
+  longpaths = true
 [user]
   name = Kevin Plotner
   email = secoast@gmail.com
 [push]
-  default=current
+  default = current
+[difftool "sourcetree"]
+       cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+       path = [mergetool "sourcetree"]
+       cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+       trustExitCode = true
 
 [alias]
   # basics
