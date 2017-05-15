@@ -13,13 +13,13 @@ Plug 'christoomey/vim-rfactory'
 Plug 'rizzatti/dash.vim'
 " Color/info in status bar
 Plug 'vim-airline/vim-airline'
-" Really only use for directory changes
-Plug 'scrooloose/nerdtree'
 " Static linter/style checking
 Plug 'ngmy/vim-rubocop'
 " Commands  "[???"
 Plug 'tpope/vim-unimpared'
 
+" Really only use for directory changes
+Plug 'scrooloose/nerdtree'
 " Plug 'elzr/vim-json'
 " Plug 'tpope/vim-haml'
 " Plug 'godlygeek/tabular'
