@@ -47,6 +47,6 @@
 
   # pass a hash of a commit to see ll of or diff of
   lc    = "!f() { git ll "$1"^.."$1"; }; f"
-  dr    = "!f() { git diff "$1"^.."$1"; }; f"
+  sh    = show $1
 
   la = "!git config -l | grep alias | cut -c 7-"
