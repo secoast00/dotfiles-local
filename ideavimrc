@@ -147,14 +147,14 @@ set diffopt+=vertical
 
 " Color scheme
 syntax enable
-colorscheme monokai
+" colorscheme monokai
 set visualbell
 " turn off auto line break insertion
 set textwidth=0 wrapmargin=0
 
 " Make it obvious where col 80 is and also all after col 120
 " set colorcolumn=+1
-let &colorcolumn="80,".join(range(120,130),",")
+let &colorcolumn="100,".join(range(120,130),",")
 
 
 " need to add ctermbg colors
@@ -196,10 +196,10 @@ let g:rspec_runner = "os_x_iterm2"
 let g:rspec_command = "!rspec {spec}"
 
 "  Save file when changing windows
- nnoremap <silent> gh :WriteBufferIfNecessary<CR>:wincmd h<CR>
- nnoremap <silent> gj :WriteBufferIfNecessary<CR>:wincmd j<CR>
- nnoremap <silent> gk :WriteBufferIfNecessary<CR>:wincmd k<CR>
- nnoremap <silent> gl :WriteBufferIfNecessary<CR>:wincmd l<CR>
+"  nnoremap <silent> gh :WriteBufferIfNecessary<CR>:wincmd h<CR>
+"  nnoremap <silent> gj :WriteBufferIfNecessary<CR>:wincmd j<CR>
+"  nnoremap <silent> gk :WriteBufferIfNecessary<CR>:wincmd k<CR>
+"  nnoremap <silent> gl :WriteBufferIfNecessary<CR>:wincmd l<CR>
 
 " nnoremap <C-j> <C-w>j
 " nnoremap <C-k> <C-w>k
