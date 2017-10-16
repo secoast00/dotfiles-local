@@ -1,7 +1,6 @@
 # Unix
 alias cl="clear"
-#alias ll='exa -alh --sort=(name)'
-#alias ls='exa -a --group-directories-first'
+alias ll='exa -alh --group-directories-first'
 
 alias ...='../..'
 alias -g G='| grep'
@@ -11,7 +10,6 @@ alias -g L='| wc -l'
 # alias -g ONE="| awk '{ print \$1}'"
 
 # reference correct ctags on osx
-# alias ctags="`brew --prefix`/bin/ctags"
 alias be="bundle exec"
 #alias ber='[ -d "bin" ] && ./bin/rake | rake'
 
@@ -21,15 +19,10 @@ alias tmns="tmux new-session -s"
 alias tmss="tmux switch-client -t"
 alias tmat="tat"
 
-# rails
-# alias rake='[ -d "bin" ] &&  ./bin/rake | rake'
-# alias rails="bundle exec ./bin/rails"
-# alias vi="vim"
-
 # alias pbsave='pbpaste > \!^ && echo "" >> \!^'
 
 # reference correct ctags on osx
 # alias ctags="`brew --prefix`/bin/ctags"
 #
-alias spinach="lsof -t -i tcp:8875 | xargs kill && spinach"
-alias fs="lsof -t -i tcp:8875 | xargs kill && spinach"
+# alias spinach="lsof -t -i tcp:8875 | xargs kill && spinach"
+# alias fs="lsof -t -i tcp:8875 | xargs kill && spinach"

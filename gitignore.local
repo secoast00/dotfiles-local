@@ -2,10 +2,7 @@ kjp*
 
 .envrc
 
-.idea
-
 postgres_log
-
 
 # .ruby-gemset
 # .ruby-version
@@ -17,8 +14,9 @@ postgres_log
 # bundler
 # bundler_stubs
 
-*.pdf
+# *.pdf
 .env*
 
 /.idea
+*.iml
 coverage

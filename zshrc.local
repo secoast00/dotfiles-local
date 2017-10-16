@@ -1,11 +1,54 @@
-export PATH="$HOME/.nodenv/bin:$PATH"
+export PATH=$PATH:" /Users/secoast/.nodenv/shims"
+# export PATH="$HOME/.nodenv/bin:$PATH"
 eval "$(nodenv init -)"
 source $( echo $(which vv)-completions)
 
 PS1='${SSH_CONNECTION+"%{$fg_bold[green]%}%n@%m:"}%{$fg_bold[blue]%}%c%{$reset_color%}$(git_prompt_info)
 %# '
 
-export ANDROID_HOME=${HOME}/Library/Android/sdk
-export PATH=${PATH}:${ANDROID_HOME}/tools
-export PATH=${PATH}:${ANDROID_HOME}/tools/bin
-export PATH=${PATH}:${ANDROID_HOME}/platform-tools
+# rails upgrade help
+# functions should be put in a folder and set to autoload
+# see https://unix.stackexchange.com/questions/33255/how-to-define-and-load-your-own-shell-function-in-zsh
+# go() {
+#   gem="$1"
+#   if [ -z "$gem" ]; then
+#     echo "specify a gem name" >&2
+#   else
+#   bundle update "$gem" && \
+#       git diff && \
+#       bin/rake test:db && \
+#       bin/spinach && \
+#       git add Gemfile.lock && \
+#       git commit -m "$gem update"
+#   fi
+# }
+
+# open files found with string in vim
+# vg() {
+#   editor=${VISUAL:-vim}
+#   if [ "$#" = "1" ]; then
+#     $editor -c "/$1" $(ag -l $1 **/*)
+#   elif [ "$#" = "2" ]; then
+#     $editor -c "/$1" $(ag -l $1 $2)
+#   else
+#     $editor $(ag -l $@)
+#   fi
+# }
+
+# cf() {
+#   local file
+
+#   file="$(locate -i -0 $@ | grep -z -vE '~$' | fzf --read0 -0 -1)"
+
+#   if [[ -n $file ]]
+#   then
+#      if [[ -d $file ]]
+#      then
+#         cd -- $file
+#      else
+#         cd -- ${file:h}
+#      fi
+#   fi
+# }
+
+eval "$(direnv hook zsh)"

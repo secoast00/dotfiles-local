@@ -7,7 +7,7 @@ set textwidth=0 wrapmargin=0
 
 " Make it obvious where col 80 is and also all after col 120
 " set colorcolumn=+1
-let &colorcolumn="100,".join(range(120,130),",")
+let &colorcolumn="80,".join(range(120,130),",")
 
 
 " need to add ctermbg colors

@@ -1,48 +1,22 @@
 UnPlug 'fatih/vim-go'
 
-" Installed in vimrc.bundles
-" Plug 'christoomey/vim-run-interactive'
-" Plug 'ctrlpvim/ctrlp.vim'
-" Plug 'elixir-lang/vim-elixir'
-" Plug 'fatih/vim-go'
-" Plug 'janko-m/vim-test'
-" Plug 'kchmck/vim-coffee-script'
-" " auto create parent difs on file save
-" Plug 'pbrisbin/vim-mkdir'
-" Plug 'scrooloose/syntastic'
-" Plug 'slim-template/vim-slim'
-" Plug 'tpope/vim-bundler'
-" Plug 'tpope/vim-endwise'
-" Plug 'tpope/vim-eunuch'
-" Plug 'tpope/vim-fugitive'
-" Plug 'tpope/vim-projectionist'
-" Plug 'tpope/vim-rails'
-" Plug 'tpope/vim-rake'
-" Plug 'tpope/vim-repeat'
-" Plug 'tpope/vim-rhubarb'
-" Plug 'tpope/vim-surround'
-" Plug 'vim-ruby/vim-ruby'
-" Plug 'vim-scripts/tComment'
-"
-Plug 'valloric/youcompleteme'
+" Plug 'valloric/youcompleteme'
 " C-h/j/k/l to change out of vim into tmux pane
 Plug 'christoomey/vim-tmux-navigator'
 " Don't know if needed
-Plug 'pangloss/vim-javascript'
+" lug 'pangloss/vim-javascript'
 " JSX
-Plug 'mxw/vim-jsx'
+" Plug 'mxw/vim-jsx'
 " Refactor ruby code
 Plug 'avdgaag/vim-rbfactor'  " ruby extract
 " Nav to factories
 Plug 'christoomey/vim-rfactory'
 " Access to dash, word under cursor or typed in
 Plug 'rizzatti/dash.vim'
-" Color/info in status bar
-Plug 'vim-airline/vim-airline'
 " Static linter/style checking
 Plug 'ngmy/vim-rubocop'
 " Commands  "[???"
-Plug 'tpope/vim-unimpared'
+Plug 'tpope/vim-unimpaired'
 
 " Really only use for directory changes
 Plug 'scrooloose/nerdtree'
@@ -50,4 +24,4 @@ Plug 'scrooloose/nerdtree'
 " Plug 'tpope/vim-haml'
 " Plug 'godlygeek/tabular'
 " Plug 'jceb/vim-orgmode'
-"Plug 'vim-scripts/xxx'
+" Plug 'vim-scripts/xxx'

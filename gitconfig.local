@@ -3,35 +3,29 @@
 [user]
   name = Kevin Plotner
   email = secoast@gmail.com
-[push]
-  default = current
-[difftool "sourcetree"]
-       cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-       path = [mergetool "sourcetree"]
-       cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-       trustExitCode = true
 
 [alias]
   # basics
   br    = branch -v
   bra   = branch -a -v
-  co    = checkout
   cp    = cherry-pick
-  ci    = commit
-  diff  = diff --word-diff
-  dc    = diff --cached
-  dno   = diff --name-only
-  pf    = push --force-with-lease
+  diffw = diff --word-diff
+  diffc = diff --cached
+  diffno= diff --name-only
 
+  # git reset --mixed HEAD -- undo adding to index, nothing lost
   r     = reset
+  # un commit last commit, so you can edit --
   r1    = reset HEAD~1
+  # throw away current changes in branch
   rh    = reset --hard
+  # throw away last commit
   rh1   = reset HEAD~1 --hard
 
   sp    = stash pop
 
   l     = log --graph --decorate --oneline
-  lch   = log -p --follow -n 1
+  lch4   = show -n 4
 
   # optional param -n where n is number of commits
   ls    = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
@@ -39,11 +33,11 @@
   ld    = log --graph --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
   lds   = log --graph --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
 
-  # file log: pass filename to see history
-  fl    = log -u
+  # file log: pass filename to see history -- same as g show -n 20 <filename>
+  # fl    = log -u
 
   # diff of last commit
-  dlc   = diff --cached HEAD~1
+  #dlc   = diff --cached HEAD~1
 
   # pass a hash of a commit to see ll of or diff of
   lc    = "!f() { git ll "$1"^.."$1"; }; f"

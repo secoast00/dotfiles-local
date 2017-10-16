@@ -1,6 +1,0 @@
-# npm and karma
-# export PATH=$PATH:"/usr/local/sbin:"
-# export PATH=$PATH:"/usr/local/bin/node:"
-# export PATH=$PATH:"/usr/local/bin/npm:"
-# export PATH=$PATH:"/usr/local/lib/node_modules/karma/bin:"
-export PATH=$PATH:" /Users/secoast/.nodenv/shims"
