@@ -1,6 +1,7 @@
 # Unix
 alias cl="clear"
 alias ll='exa -alh --group-directories-first'
+alias lld='exa -alhd */ .*/'
 
 alias ...='../..'
 alias -g G='| grep'
@@ -26,3 +27,4 @@ alias tmat="tat"
 #
 # alias spinach="lsof -t -i tcp:8875 | xargs kill && spinach"
 # alias fs="lsof -t -i tcp:8875 | xargs kill && spinach"
+alias dc="docker-compose"
