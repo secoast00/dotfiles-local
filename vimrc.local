@@ -15,6 +15,7 @@ let &colorcolumn="80,".join(range(120,130),",")
 " highlight Folded  guibg=#0A0A0A guifg=#9090D0
 " highlight ColorColumn ctermbg=235
 
+" show line where cursor is located
 set cursorline
 
 set hlsearch
